@@ -3,3 +3,14 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+footer {
+    background-image: url("assets/banner1.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
