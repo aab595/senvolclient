@@ -1,6 +1,7 @@
 .header {
     background-color: #ffffff;
     width: 100%;
+    padding-bottom: 15px;
     
     .top {
         background-color: #197e07;
@@ -74,12 +75,13 @@
         width: 100%;
         display: inline-block;
         margin-top: 15px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
     .slogan {
-        padding: 0 15px;
+        padding: 0 50px;
+        width: 60%;
         h2 {
             margin-bottom: 5px;
         }
