@@ -10,6 +10,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FlightsComponent } from './components/flights/flights.component';
 import { DestinationsComponent } from './components/destinations/destinations.component';
+import { FlightPageComponent } from './components/flight-page/flight-page.component';
+import { ReservationPageComponent } from './components/reservation-page/reservation-page.component';
+import { ContactPageComponent } from './components/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +21,14 @@ import { DestinationsComponent } from './components/destinations/destinations.co
     HeaderComponent,
     FooterComponent,
     FlightsComponent,
-    DestinationsComponent
+    DestinationsComponent,
+    FlightPageComponent,
+    ReservationPageComponent,
+    ContactPageComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor() {

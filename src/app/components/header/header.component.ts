@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   menuType!: string;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.menuType = 'menu';
@@ -18,10 +19,10 @@ export class HeaderComponent implements OnInit {
     let list = document.querySelector('#menuList') as HTMLUListElement;
     this.menuType === 'menu'
       ? ((this.menuType = 'close'),
-        list.classList.add('top-[150px]'),
+        list.classList.add('top-[80px]'),
         list.classList.add('opacity-100'))
       : ((this.menuType = 'menu'),
-        list.classList.remove('top-[150px]'),
+        list.classList.remove('top-[80px]'),
         list.classList.remove('opacity-100'));
   }
 }

@@ -8,6 +8,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.btn-green {
+  @apply bg-green-700 text-white duration-500 px-6 py-2 mx-4 hover:bg-green-800 rounded
+}
+
 footer {
     background-image: url("assets/banner1.png");
     background-repeat: no-repeat;

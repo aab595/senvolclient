@@ -1,0 +1,7 @@
+.nav-link-a {
+  @apply text-lg font-medium hover:text-green-700 hover:border-b-4 hover:border-green-500 duration-500;
+}
+
+.active {
+  @apply text-green-700 border-b-4 border-green-500;
+}

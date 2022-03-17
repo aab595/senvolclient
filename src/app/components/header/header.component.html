@@ -22,19 +22,19 @@
         <ul class="md:flex md:items-center z-10 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
             id="menuList">
             <li class="mx-4 my-6 md:my-0">
-                <a href="#" class="text-lg font-medium hover:text-green-700 duration-500">Accueil</a>
+                <a href="#" class="nav-link-a" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
             </li>
             <li class="mx-4 my-6 md:my-0">
-                <a href="#" class="text-lg font-medium hover:text-green-700 duration-500">Vols</a>
+                <a href="#" class="nav-link-a" routerLink="/flight" routerLinkActive="active">Vols</a>
             </li>
             <li class="mx-4 my-6 md:my-0">
-                <a href="#" class="text-lg font-medium hover:text-green-700 duration-500">Réservations</a>
+                <a href="#" class="nav-link-a" routerLink="/reservation" routerLinkActive="active">Réservations</a>
             </li>
             <li class="mx-4 my-6 md:my-0">
-                <a href="#" class="text-lg font-medium hover:text-green-700 duration-500">Contact</a>
+                <a href="#" class="nav-link-a" routerLink="/contact" routerLinkActive="active">Contact</a>
             </li>
 
-            <button class="bg-green-700 text-white duration-500 px-6 py-2 mx-4 hover:bg-green-800 rounded">
+            <button class="btn-green">
                 Se connecter
             </button>
         </ul>
