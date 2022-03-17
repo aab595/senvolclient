@@ -19,10 +19,10 @@ export class HeaderComponent implements OnInit {
     let list = document.querySelector('#menuList') as HTMLUListElement;
     this.menuType === 'menu'
       ? ((this.menuType = 'close'),
-        list.classList.add('top-[80px]'),
+        list.classList.add('top-[200px]'),
         list.classList.add('opacity-100'))
       : ((this.menuType = 'menu'),
-        list.classList.remove('top-[80px]'),
+        list.classList.remove('top-[200px]'),
         list.classList.remove('opacity-100'));
   }
 }
