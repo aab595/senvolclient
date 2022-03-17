@@ -12,6 +12,10 @@
   @apply bg-green-700 text-white duration-500 px-6 py-2 mx-4 hover:bg-green-800 rounded
 }
 
+.top-badge {
+  @apply text-xl text-white font-semibold mb-2 uppercase absolute -top-6 py-2 px-4 shadow-lg rounded-lg bg-green-600
+}
+
 footer {
     background-image: url("assets/banner1.png");
     background-repeat: no-repeat;

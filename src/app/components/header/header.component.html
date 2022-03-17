@@ -1,5 +1,5 @@
 <header class="fixed z-30 top-0 left-0 right-0">
-    <!-- <div class="bg-green-700 h-20 p-5 w-full">
+  <!-- <div class="bg-green-700 h-20 p-5 w-full">
         <div class="mb-6 w-60 flex items-center float-right gap-2">
             <input type="search" id="email"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 transition-all duration-500"
@@ -7,37 +7,60 @@
             <span class="material-icons text-white text-3xl font-semibold hover:cursor-pointer hover:text-yellow-500 transition-all duration-500">search</span>
         </div>
     </div> -->
-    <nav class="p-5 bg-white shadow md:flex md:items-center md:justify-between">
-        <div class="flex justify-between items-center">
-            <span class="text-2xl">
-                <img src="assets/logo.png" alt="logo" class="h-10 inline">
-                SenVol
-            </span>
+  <nav class="p-5 bg-white drop-shadow-lg md:flex md:items-center md:justify-between">
+    <div class="flex justify-between items-center">
+      <span class="text-2xl">
+        <img src="assets/logo.png" alt="logo" class="h-10 inline" />
+        SenVol
+      </span>
 
-            <span class="text-3xl cursor-pointer mx-2 md:hidden block">
-                <span class="material-icons" (click)="menu()">{{ menuType }}</span>
-            </span>
-        </div>
+      <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+        <span class="material-icons" (click)="menu()">{{ menuType }}</span>
+      </span>
+    </div>
 
-        <ul class="md:flex md:items-center z-10 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
-            id="menuList">
-            <li class="mx-4 my-6 md:my-0">
-                <a href="#" class="nav-link-a" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
-            </li>
-            <li class="mx-4 my-6 md:my-0">
-                <a href="#" class="nav-link-a" routerLink="/flight" routerLinkActive="active">Vols</a>
-            </li>
-            <li class="mx-4 my-6 md:my-0">
-                <a href="#" class="nav-link-a" routerLink="/reservation" routerLinkActive="active">Réservations</a>
-            </li>
-            <li class="mx-4 my-6 md:my-0">
-                <a href="#" class="nav-link-a" routerLink="/contact" routerLinkActive="active">Contact</a>
-            </li>
+    <ul class="nav-list" id="menuList">
+      <li class="mx-4 my-6 md:my-0">
+        <a
+          href="#"
+          class="nav-link-a"
+          routerLink=""
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Accueil</a
+        >
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a
+          href="#"
+          class="nav-link-a"
+          routerLink="/flight"
+          routerLinkActive="active"
+          >Vols</a
+        >
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a
+          href="#"
+          class="nav-link-a"
+          routerLink="/reservation"
+          routerLinkActive="active"
+          >Réservations</a
+        >
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a
+          href="#"
+          class="nav-link-a"
+          routerLink="/contact"
+          routerLinkActive="active"
+          >Contact</a
+        >
+      </li>
 
-            <button class="btn-green">
-                Se connecter
-            </button>
-        </ul>
-    </nav>
+      <button class="btn-green">Se connecter</button>
+    </ul>
+  </nav>
 </header>
-<img src="assets/banner2.jpg" alt="bannerImg" class="mt-20 w-full">
+<img src="assets/banner2.jpg" alt="bannerImg" class="mt-20 w-full" />
+
