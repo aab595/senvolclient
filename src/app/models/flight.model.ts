@@ -1,7 +1,7 @@
 export class Flight {
     flightType!: string;
     startCity!: string;
-    destination!: string;
+    endCity!: string;
     startDate!: Date;
     endDate!: Date;
     rate!: number;
