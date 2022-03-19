@@ -9,7 +9,7 @@ export class FlightService {
     {
       flightType: 'Aller-simple',
       startCity: 'DK',
-      destination: 'Maroc',
+      endCity: 'Maroc',
       startDate: new Date(),
       endDate: new Date(),
       rate: 300000,
@@ -17,7 +17,7 @@ export class FlightService {
     {
       flightType: 'Aller-retour',
       startCity: 'DK',
-      destination: 'Maroc',
+      endCity: 'Maroc',
       startDate: new Date(),
       endDate: new Date(),
       rate: 250000,
@@ -25,7 +25,7 @@ export class FlightService {
     {
       flightType: 'Aller-simple',
       startCity: 'DK',
-      destination: 'Maroc',
+      endCity: 'Maroc',
       startDate: new Date(),
       endDate: new Date(),
       rate: 300000,
@@ -33,7 +33,7 @@ export class FlightService {
     {
       flightType: 'Aller-retour',
       startCity: 'DK',
-      destination: 'Maroc',
+      endCity: 'Maroc',
       startDate: new Date(),
       endDate: new Date(),
       rate: 400000,

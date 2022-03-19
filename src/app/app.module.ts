@@ -13,6 +13,9 @@ import { DestinationsComponent } from './components/destinations/destinations.co
 import { FlightPageComponent } from './components/flight-page/flight-page.component';
 import { ReservationPageComponent } from './components/reservation-page/reservation-page.component';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
+import { ReservationComponent } from './components/reservation/reservation.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { ContactPageComponent } from './components/contact-page/contact-page.com
     FlightPageComponent,
     ReservationPageComponent,
     ContactPageComponent,
+    ReservationComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
