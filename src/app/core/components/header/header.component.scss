@@ -1,0 +1,15 @@
+.nav-list {
+  @apply absolute md:flex md:items-center md:z-auto md:static bg-white w-full left-0 opacity-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 transition-all ease-in duration-500;
+}
+
+.nav-link-a {
+  @apply text-lg font-medium hover:text-green-700 hover:border-b-4 hover:border-green-600 hover:cursor-pointer duration-500;
+}
+
+.active {
+  @apply text-green-700 border-b-4 border-green-600;
+}
+
+.showMenu {
+  opacity: 90% !important;
+}
