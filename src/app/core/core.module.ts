@@ -2,10 +2,10 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { CommonModule, registerLocaleData } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-// import { httpInterceptorProviders } from '../interceptors';
 import * as fr from '@angular/common/locales/fr';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { httpInterceptorProviders } from './interceptors';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent],
@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
   exports: [HeaderComponent, FooterComponent],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR' },
-    // httpInterceptorProviders,
+    httpInterceptorProviders,
   ],
 })
 export class CoreModule {

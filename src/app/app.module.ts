@@ -11,9 +11,7 @@ import { ContactPageModule } from './contact-page/contact-page.module';
 import { AuthPageModule } from './auth-page/auth-page.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -22,7 +20,7 @@ import { AuthPageModule } from './auth-page/auth-page.module';
     FlightPageModule,
     ReservationPageModule,
     ContactPageModule,
-    AuthPageModule
+    AuthPageModule,
   ],
   bootstrap: [AppComponent],
 })

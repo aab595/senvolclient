@@ -1,32 +1,17 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Destination } from '../models/destination.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DestinationService {
-  destinations: Destination[] = [
-    {
-      id: 1,
-      title: 'Maroc',
-      cover: 'cover 1',
-      description: 'desc 1',
-    },
-    {
-      id: 2,
-      title: 'Paris',
-      cover: 'cover 1',
-      description: 'desc 1',
-    },
-    {
-      id: 3,
-      title: 'Dakar',
-      cover: 'cover 1',
-      description: 'desc 1',
-    },
-  ];
+  constructor(private http: HttpClient) {}
 
-  getAllDestination(): Destination[] {
-    return this.destinations;
+  getAllDestination(): Observable<Destination[]> {
+    return this.http.get<Destination[]>(
+      'http://localhost:3000/api/destinations'
+    );
   }
 }

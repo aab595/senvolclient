@@ -1,35 +1,3 @@
-<!-- <nav class="relative p-5 bg-white drop-shadow-lg md:flex md:items-center md:justify-between">
-    <div class="flex justify-between items-center">
-        <span class="text-2xl">
-            <img src="assets/logo.png" alt="logo" class="h-10 inline" />
-            SenVol
-        </span>
-
-        <span class="text-3xl cursor-pointer mx-2 md:hidden block">
-            <span class="material-icons" (click)="menu()">{{ menuType }}</span>
-        </span>
-    </div>
-
-    <ul class="md:flex md:items-center z-10 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
-        id="menuList">
-        <li class="mx-4 my-6 md:my-0">
-            <a href="#" class="nav-link-a" routerLink="/" routerLinkActive="active"
-                [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
-        </li>
-        <li class="mx-4 my-6 md:my-0">
-            <a href="#" class="nav-link-a" routerLink="/flight" routerLinkActive="active">Vols</a>
-        </li>
-        <li class="mx-4 my-6 md:my-0">
-            <a href="#" class="nav-link-a" routerLink="/reservation" routerLinkActive="active">Réservations</a>
-        </li>
-        <li class="mx-4 my-6 md:my-0">
-            <a href="#" class="nav-link-a" routerLink="/contact" routerLinkActive="active">Contact</a>
-        </li>
-        <button class="btn-green ml-5" routerLink="/auth">Se connecter</button>
-    </ul>
-</nav>
-<img src="assets/banner2.jpg" alt="bannerImg" class="w-full"/> -->
-
 <header>
     <nav class="relative z-[1] p-5 bg-white drop-shadow-lg md:flex md:items-center md:justify-between">
         <div class="flex justify-between items-center">
@@ -42,16 +10,17 @@
         </div>
         <ul class="nav-list" [ngClass]="{showMenu: menuType === 'close'}">
             <li class="mx-4 my-6 md:my-0">
-                <a class="nav-link-a">Accueil</a>
+                <a class="nav-link-a" routerLink="/" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
             </li>
             <li class="mx-4 my-6 md:my-0">
-                <a class="nav-link-a">Vols</a>
+                <a class="nav-link-a" routerLink="/flight" routerLinkActive="active">Vols</a>
             </li>
             <li class="mx-4 my-6 md:my-0">
-                <a class="nav-link-a">Réservations</a>
+                <a class="nav-link-a" routerLink="/reservation" routerLinkActive="active">Réservations</a>
             </li>
             <li class="mx-4 my-6 md:my-0">
-                <a class="nav-link-a">Contact</a>
+                <a class="nav-link-a" routerLink="/contact" routerLinkActive="active">Contact</a>
             </li>
             <button class="btn-green mx-4" routerLink="/auth">Se connecter</button>
         </ul>
