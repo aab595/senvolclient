@@ -1,0 +1,29 @@
+<header>
+    <nav class="relative z-[1] p-5 bg-white drop-shadow-lg md:flex md:items-center md:justify-between">
+        <div class="flex justify-between items-center">
+            <span class="text-2xl">
+                <img src="assets/logo.png" alt="logo" class="h-10 inline"> SenVol
+            </span>
+            <button class="text-3xl cursor-pointer md:hidden block" (click)="menu()">
+                <span class="material-icons">{{ menuType }}</span>
+            </button>
+        </div>
+        <ul class="nav-list" [ngClass]="{showMenu: menuType === 'close'}">
+            <li class="mx-4 my-6 md:my-0">
+                <a class="nav-link-a" routerLink="/" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a class="nav-link-a" routerLink="/flight" routerLinkActive="active">Vols</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a class="nav-link-a" routerLink="/reservation" routerLinkActive="active">Réservations</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a class="nav-link-a" routerLink="/contact" routerLinkActive="active">Contact</a>
+            </li>
+            <button class="btn-green mx-4" routerLink="/auth">Se connecter</button>
+        </ul>
+    </nav>
+    <img src="assets/banner2.jpg" alt="banniere" class="w-full">
+</header>

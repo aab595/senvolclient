@@ -1,0 +1,53 @@
+
+<div class="relative bg-white mx-auto rounded-lg w-full p-10 drop-shadow-lg">
+    <h3 class="top-badge">Connexion</h3>
+    <form [formGroup]="loginForm">
+        <div class="mb-6">
+            <label for="email" class="block mb-2 text-green-600 font-medium">
+                Adresse e-mail
+            </label>
+            <div class="relative">
+                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                    <span class="material-icons w-5 h-5 text-green-600">email</span>
+                </div>
+                <input type="text" id="email" autocomplete="off" formControlName="email"
+                    class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 pl-10" />
+            </div>
+            <div *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+                <div *ngIf="email?.errors?.['required']" class="text-red-500 text-xs">
+                    Adresse e-mail obligatoire.
+                </div>
+                <div *ngIf="email?.errors?.['email']" class="text-red-500 text-xs">
+                    Adresse e-mail invalid.
+                </div>
+            </div>
+        </div>
+        <div class="mb-6">
+            <label for="password" class="block mb-2 text-green-600 font-medium">
+                Mot de passe
+            </label>
+            <div class="relative">
+                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                    <span class="material-icons w-5 h-5 text-green-600">key</span>
+                </div>
+                <input type="password" id="password" autocomplete="off" formControlName="password"
+                    class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 pl-10" />
+            </div>
+            <div *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+                <div *ngIf="password?.errors?.['required']" class="text-red-500 text-xs">
+                    Le mot de passe est obligatoire
+                </div>
+            </div>
+        </div>
+        <div class="flex items-start mb-6">
+            <div class="flex items-center h-5">
+                <input id="remember" aria-describedby="remember" type="checkbox"
+                    class="w-4 h-4 bg-white rounded border-2 border-green-600 focus:ring-green-600" required />
+            </div>
+            <div class="ml-3 text-sm">
+                <label for="remember" class="font-medium text-gray-500">Se rappeler de moi</label>
+            </div>
+        </div>
+        <button type="submit" class="btn-green" (click)="onSignin()" [disabled]="loginForm.invalid">Connexion</button>
+    </form>
+</div>

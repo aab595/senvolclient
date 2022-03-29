@@ -1,0 +1,28 @@
+<div class="relative z-0 mt-[50px] mb-[50px] mx-auto w-4/5 bg-white p-5 rounded-md">
+  <h3 class="top-badge">A propos de SenVol</h3>
+  <p class="text-justify mt-6 selection:bg-green-600">
+    <strong>Sénégal Vol</strong> est une entreprise dynamique imprégnée de la
+    culture sénégalaise et de l'<em><strong>ESPRIT TERANGA</strong></em>. Ses principales préoccupations sont la
+    sécurité, la fiabilité et la
+    qualité de l’accueil. Des principes fondateurs mis au service des clients
+    pour leur satisfaction. Compagnie aérienne d’envergure internationale,
+    <strong>Sénégal Vol</strong> se construit aux normes internationales les
+    plus rigoureuses du transport aériens : <strong>sécurité</strong>,
+    <strong>fiabilité</strong> et <strong>qualité</strong>. Marque de notre
+    culture.
+  </p>
+</div>
+
+<div class="relative z-20 my-[25px] mx-auto w-4/5 bg-white p-[25px] rounded-md">
+  <h3 class="top-badge">Nos destinations</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-[25px] mt-6">
+    <app-destination 
+      *ngFor="let destination of destinations$ | async" 
+      [destination]="destination"
+    ></app-destination>
+  </div>
+</div>
+
+<div>
+  <p *ngFor="let item of destinations$ | async">item.title</p>
+</div>
