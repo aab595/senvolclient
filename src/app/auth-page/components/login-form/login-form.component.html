@@ -10,7 +10,7 @@
                     <span class="material-icons w-5 h-5 text-green-600">email</span>
                 </div>
                 <input type="text" id="email" autocomplete="off" formControlName="email"
-                    class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 pl-10" />
+                    class="form-control pl-10" />
             </div>
             <div *ngIf="email?.invalid && (email?.dirty || email?.touched)">
                 <div *ngIf="email?.errors?.['required']" class="text-red-500 text-xs">
@@ -30,7 +30,7 @@
                     <span class="material-icons w-5 h-5 text-green-600">key</span>
                 </div>
                 <input type="password" id="password" autocomplete="off" formControlName="password"
-                    class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 pl-10" />
+                    class="form-control pl-10" />
             </div>
             <div *ngIf="password?.invalid && (password?.dirty || password?.touched)">
                 <div *ngIf="password?.errors?.['required']" class="text-red-500 text-xs">

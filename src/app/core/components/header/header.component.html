@@ -1,5 +1,5 @@
 <header>
-    <nav class="relative z-[1] p-5 bg-white drop-shadow-lg md:flex md:items-center md:justify-between">
+    <nav class="nav">
         <div class="flex justify-between items-center">
             <span class="text-2xl">
                 <img src="assets/logo.png" alt="logo" class="h-10 inline"> SenVol
@@ -22,7 +22,8 @@
             <li class="mx-4 my-6 md:my-0">
                 <a class="nav-link-a" routerLink="/contact" routerLinkActive="active">Contact</a>
             </li>
-            <button class="btn-green mx-4" routerLink="/auth">Se connecter</button>
+            <button *ngIf="!isLoggedIn()" class="btn-green mx-4" routerLink="/auth">Se connecter</button>
+            <button *ngIf="isLoggedIn()" class="btn-green mx-4" (click)="loggedOut()" >Déconnexion</button>
         </ul>
     </nav>
     <img src="assets/banner2.jpg" alt="banniere" class="w-full">

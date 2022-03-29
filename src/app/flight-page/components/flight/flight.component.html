@@ -1,1 +1,27 @@
-<p>flight works!</p>
+<div
+  class="grid md:grid-cols-3 sm:grid-cols-1 w-4/5 mx-auto my-[25px] divide-x-2 divide-dashed bg-white rounded-xl shadow-md selection:bg-green-600">
+  <div class="p-5 md:col-span-2 sm:col-span-1">
+    <div class="flex justify-between">
+      <p class="text-red-600 uppercase mb-2 font-semibold selection:bg-yellow-400">{{ flight.flightType }}</p>
+      <p class="font-medium">prévu {{ flight.startDate | date: 'le d MMMM yyyy' }}</p>
+    </div>
+    <div class="flex justify-between mb-2">
+      <div>{{ flight.startDate | date: 'HH:mm' }}</div>
+      <div class="flex items-center justify-center gap-2">
+        <div>{{ timeDifference(flight.startDate | date: 'HH:mm:ss', flight.endDate | date: 'HH:mm:ss') }}h</div>
+        <span class="material-icons rotate-90 text-sm text-blue-500">flight</span>
+        <div>direct</div>
+      </div>
+      <div>{{ flight.endDate | date: 'HH:mm' }}</div>
+    </div>
+    <div class="flex justify-between">
+      <p class="text-xl font-semibold">{{ flight.startCity }}</p>
+      <p class="text-xl font-semibold">{{ flight.destination }}</p>
+    </div>
+  </div>
+
+  <div class="flex flex-col justify-between p-5 items-center">
+    <p class="font-medium text-3xl opacity-70">{{ flight.rate }} XOF</p>
+    <button class="btn-green">Sélectionner</button>
+  </div>
+</div>

@@ -1,3 +1,6 @@
+.nav {
+  @apply relative z-[1] p-5 bg-white drop-shadow-lg md:flex md:items-center md:justify-between;
+}
 .nav-list {
   @apply absolute md:flex md:items-center md:z-auto md:static bg-white w-full left-0 opacity-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 transition-all ease-in duration-500;
 }

@@ -1,5 +1,6 @@
 export class Destination {
-    title!: string;
-    cover!: string;
-    description!: string;
+  _id?: string;
+  title!: string;
+  cover!: string;
+  description!: string;
 }

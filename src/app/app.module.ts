@@ -9,6 +9,7 @@ import { FlightPageModule } from './flight-page/flight-page.module';
 import { ReservationPageModule } from './reservation-page/reservation-page.module';
 import { ContactPageModule } from './contact-page/contact-page.module';
 import { AuthPageModule } from './auth-page/auth-page.module';
+import { AdminPageModule } from './admin-page/admin-page.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +22,7 @@ import { AuthPageModule } from './auth-page/auth-page.module';
     ReservationPageModule,
     ContactPageModule,
     AuthPageModule,
+    AdminPageModule
   ],
   bootstrap: [AppComponent],
 })
