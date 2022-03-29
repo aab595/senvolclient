@@ -16,6 +16,8 @@ import { ContactPageComponent } from './components/contact-page/contact-page.com
 import { ReservationComponent } from './components/reservation/reservation.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthPageComponent } from './auth-page/auth-page.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +33,9 @@ import { RegisterComponent } from './components/register/register.component';
     ReservationComponent,
     LoginComponent,
     RegisterComponent,
+    AuthPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
   bootstrap: [AppComponent],
 })
