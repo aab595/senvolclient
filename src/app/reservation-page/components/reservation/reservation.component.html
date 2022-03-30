@@ -1,6 +1,7 @@
+<img src="assets/banner2.jpg" alt="banniere" class="w-full">
 <div class="w-4/5 my-[25px] mx-auto">
-    <button class="btn-green float-right mb-4" routerLink="/reservation/create">
-        Ajouter une réservation
+    <button class="btn-green float-right mb-4" routerLink="/flight">
+        Afficher les vols
     </button>
     <div class="clear-both relative overflow-x-auto shadow-md sm:rounded-lg">
         <table class="w-full text-sm text-left text-gray-500">
@@ -10,7 +11,7 @@
                     <th scope="col" class="px-6 py-3">Référence vol</th>
                     <th scope="col" class="px-6 py-3">Nombre de passager</th>
                     <th scope="col" class="px-6 py-3">Classe</th>
-                    <th scope="col" class="px-6 py-3">Actions</th>
+                    <th scope="col" class="px-6 py-3 text-center">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -19,9 +20,9 @@
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900">{{ reservation.volRef }}</th>
                     <td class="px-6 py-4">{{ reservation.numPassenger }}</td>
                     <td class="px-6 py-4">{{ reservation.classe | json }}</td>
-                    <td class="px-6 py-4 text-left font-semibold">
-                        <span class="text-blue-700 mr-4">Edit</span>
-                        <span class="text-red-500">Delete</span>
+                    <td class="px-6 py-4 text-center font-semibold">
+                        <button class="btn-info mr-4">Modifier</button>
+                        <button class="btn-danger">Supprimer</button>
                     </td>
                 </tr>
             </tbody>

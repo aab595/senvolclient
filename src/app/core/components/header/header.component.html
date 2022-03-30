@@ -2,29 +2,33 @@
     <nav class="nav">
         <div class="flex justify-between items-center">
             <span class="text-2xl">
-                <img src="assets/logo.png" alt="logo" class="h-10 inline"> SenVol
+                <img src="assets/logo.png" alt="logo" class="h-10 inline" /> SenVol
             </span>
             <button class="text-3xl cursor-pointer md:hidden block" (click)="menu()">
                 <span class="material-icons">{{ menuType }}</span>
             </button>
         </div>
-        <ul class="nav-list" [ngClass]="{showMenu: menuType === 'close'}">
+        <ul class="nav-list" [ngClass]="{ showMenu: menuType === 'close' }">
             <li class="mx-4 my-6 md:my-0">
-                <a class="nav-link-a" routerLink="/" routerLinkActive="active"
-                [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
+                <a class="nav-link-a" routerLink="/" routerLinkActive="active" (click)="menu()"
+                    [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
             </li>
             <li class="mx-4 my-6 md:my-0">
-                <a class="nav-link-a" routerLink="/flight" routerLinkActive="active">Vols</a>
+                <a class="nav-link-a" routerLink="/flight" routerLinkActive="active" (click)="menu()">Vols</a>
             </li>
             <li class="mx-4 my-6 md:my-0">
-                <a class="nav-link-a" routerLink="/reservation" routerLinkActive="active">Réservations</a>
+                <a class="nav-link-a" routerLink="/reservation" routerLinkActive="active"
+                    (click)="menu()">Réservations</a>
             </li>
             <li class="mx-4 my-6 md:my-0">
-                <a class="nav-link-a" routerLink="/contact" routerLinkActive="active">Contact</a>
+                <a class="nav-link-a" routerLink="/contact" routerLinkActive="active" (click)="menu()">Contact</a>
             </li>
-            <button *ngIf="!isLoggedIn()" class="btn-green mx-4" routerLink="/auth">Se connecter</button>
-            <button *ngIf="isLoggedIn()" class="btn-green mx-4" (click)="loggedOut()" >Déconnexion</button>
+            <button *ngIf="!isLoggedIn()" class="btn-green mx-4" routerLink="/auth" (click)="menu()">
+                Se connecter
+            </button>
+            <button *ngIf="isLoggedIn()" class="btn-green mx-4" (click)="loggedOut()" (click)="menu()">
+                Déconnexion
+            </button>
         </ul>
     </nav>
-    <img src="assets/banner2.jpg" alt="banniere" class="w-full">
 </header>

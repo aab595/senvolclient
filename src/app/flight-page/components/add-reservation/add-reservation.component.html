@@ -15,20 +15,20 @@
                 </div>
             </div>
             <div class="w-full">
-                <fieldset class="mb-2 text-green-600 font-medium">
-                    <legend>Nombre de passagers</legend>
+                <fieldset class="text-green-600 font-medium">
+                    <legend class="mb-2">Nombre de passagers</legend>
                     <div class="grid grid-cols-3 gap-10" formGroupName="numPassenger">
                         <div class="w-full">
-                            <label for="" class="text-xs text-gray-800">Adulte(s)</label>
-                            <input type="number" name="" id="" class="form-control text-gray-700" formControlName="adult">
+                            <label for="adult" class="text-xs text-gray-800">Adulte(s)</label>
+                            <input type="number" id="adult" class="form-control text-gray-700" formControlName="adult">
                         </div>
                         <div class="w-full">
-                            <label for="" class="text-xs text-gray-800">Enfant(s)</label>
-                            <input type="number" name="" id="" class="form-control text-gray-700" formControlName="child">
+                            <label for="child" class="text-xs text-gray-800">Enfant(s)</label>
+                            <input type="number" id="child" class="form-control text-gray-700" formControlName="child">
                         </div>
                         <div class="w-full">
-                            <label for="" class="text-xs text-gray-800">Bébé(s)</label>
-                            <input type="number" name="" id="" class="form-control text-gray-700" formControlName="baby">
+                            <label for="baby" class="text-xs text-gray-800">Bébé(s)</label>
+                            <input type="number" id="baby" class="form-control text-gray-700" formControlName="baby">
                         </div>
                     </div>
                 </fieldset>
@@ -42,9 +42,9 @@
                         <span class="material-icons w-5 h-5 text-green-600">apartment</span>
                     </div>
                     <select name="" id="" class="form-control pl-10" formControlName="classe">
-                        <option value="Economy" selected>Economy</option>
-                        <option value="Business">Business</option>
-                        <option value="Eco-Premium">Eco-Premium</option>
+                        <option value="Economy" class="bg-white font-medium text-gray-700">Economy</option>
+                        <option value="Business" class="bg-white font-medium text-gray-700">Business</option>
+                        <option value="Eco-Premium" class="bg-white font-medium text-gray-700">Eco-Premium</option>
                     </select>
                 </div>
             </div>
