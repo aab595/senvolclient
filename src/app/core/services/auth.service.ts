@@ -8,17 +8,13 @@ import * as moment from 'moment';
   providedIn: 'root',
 })
 export class AuthService {
-  private _registerUrl = 'http://localhost:3000/api/auth/register';
+  private _registerUrl = 'http://localhost:3000/api/auth/signup';
   private _loginUrl = 'http://localhost:3000/api/auth/login';
 
   constructor(private http: HttpClient) {}
 
-  register(fullname: string, email: string, password: string): Observable<User> {
-    return this.http.post<User>(this._registerUrl, {
-      fullname, email, password
-    }).pipe(map(response => {
-      return response
-    }))
+  register(fullname: string, email: string, password: string): Observable<any> {
+    return this.http.post(this._registerUrl, { fullname, email, password })
   }
 
   login(email: string, password: string): Observable<User> {

@@ -6,10 +6,18 @@ import * as fr from '@angular/common/locales/fr';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptorProviders } from './interceptors';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent],
-  imports: [CommonModule, RouterModule, HttpClientModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+  ],
   exports: [HeaderComponent, FooterComponent],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR' },

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
@@ -14,6 +15,7 @@ export class LoginFormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
+    private toastr: ToastrService,
     private router: Router
   ) {}
 
@@ -36,8 +38,9 @@ export class LoginFormComponent implements OnInit {
     const body = this.loginForm.value;
 
     if (body.email && body.password) {
-      this.authService.login(body.email, body.password).subscribe(() => {
-        this.router.navigateByUrl('/')
+      this.authService.login(body.email, body.password).subscribe(async () => {
+        await this.router.navigateByUrl('/');
+        this.toastr.success('Connexion réussie !');
       });
     }
 

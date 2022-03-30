@@ -22,6 +22,6 @@
 
   <div class="flex flex-col justify-between p-5 items-center">
     <p class="font-medium text-3xl opacity-70">{{ flight.rate }} XOF</p>
-    <button class="btn-green">Sélectionner</button>
+    <button class="btn-green" (click)="onFlight(flight._id!)">Sélectionner</button>
   </div>
 </div>
