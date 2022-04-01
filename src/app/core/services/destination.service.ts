@@ -11,7 +11,7 @@ export class DestinationService {
 
   getAllDestination(): Observable<Destination[]> {
     return this.http.get<Destination[]>(
-      'http://localhost:3000/api/destinations'
+      'https://senvolapi.herokuapp.com/api/destinations'
     );
   }
 }

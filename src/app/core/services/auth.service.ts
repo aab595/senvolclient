@@ -8,8 +8,8 @@ import * as moment from 'moment';
   providedIn: 'root',
 })
 export class AuthService {
-  private _registerUrl = 'http://localhost:3000/api/auth/signup';
-  private _loginUrl = 'http://localhost:3000/api/auth/login';
+  private _registerUrl = 'https://senvolapi.herokuapp.com/api/auth/signup';
+  private _loginUrl = 'https://senvolapi.herokuapp.com/api/auth/login';
 
   constructor(private http: HttpClient) {}
 
@@ -49,5 +49,13 @@ export class AuthService {
     const expiration = localStorage.getItem('expires_at');
     const expiresAt = JSON.parse(expiration!);
     return moment(expiresAt);
+  }
+
+  getCurrentUser() {
+    const token = this.getToken();
+    let jwtData = token?.split('.')[1];
+    let decodedJwtData = atob(jwtData!);
+    let user = JSON.parse(decodedJwtData);
+    return user;
   }
 }

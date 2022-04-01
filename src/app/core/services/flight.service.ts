@@ -10,6 +10,6 @@ export class FlightService {
   constructor(private http: HttpClient) {}
 
   getAllFlight(): Observable<Flight[]> {
-    return this.http.get<Flight[]>('http://localhost:3000/api/flights');
+    return this.http.get<Flight[]>('https://senvolapi.herokuapp.com/api/flights');
   }
 }

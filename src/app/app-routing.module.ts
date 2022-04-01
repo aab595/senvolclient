@@ -7,12 +7,11 @@ import { AuthGuard } from './core/guards/auth.gard';
 import { AddReservationComponent } from './flight-page/components/add-reservation/add-reservation.component';
 import { FlightListComponent } from './flight-page/components/flight-list/flight-list.component';
 import { HomePageComponent } from './home-page/components/home-page/home-page.component';
-import { ReservationComponent } from './reservation-page/components/reservation/reservation.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'flight', component: FlightListComponent },
-  { path: 'reservation', component: ReservationComponent, canActivate: [AuthGuard] },
+  { path: 'reservation', loadChildren: () => import('./reservation-page/reservation-page.module').then(m => m.ReservationPageModule), canActivate: [AuthGuard] },
   { path: 'flight/:id', component: AddReservationComponent, canActivate: [AuthGuard] },
   { path: 'contact', component: ContactComponent },
   { path: 'auth', component: AuthComponent },

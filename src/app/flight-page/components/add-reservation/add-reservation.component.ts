@@ -4,17 +4,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
 import { Flight } from 'src/app/core/models/flight.model';
+import { AuthService } from 'src/app/core/services/auth.service';
 import { ReservationService } from 'src/app/core/services/reservation.service';
 
 @Component({
   selector: 'app-add-reservation',
   templateUrl: './add-reservation.component.html',
-  styleUrls: ['./add-reservation.component.scss']
+  styleUrls: ['./add-reservation.component.scss'],
 })
 export class AddReservationComponent implements OnInit {
   addReservationForm!: FormGroup;
   allFlights$!: Observable<Flight[]>;
-  flightId!: string
+  flightId!: string;
 
   constructor(
     private reservationService: ReservationService,
@@ -33,7 +34,7 @@ export class AddReservationComponent implements OnInit {
       }),
       classe: new FormControl('', Validators.required),
     });
-    this.flightId = this.route.snapshot.params['id']
+    this.flightId = this.route.snapshot.params['id'];
   }
 
   get volRef() {
@@ -45,10 +46,10 @@ export class AddReservationComponent implements OnInit {
   }
 
   onReservation() {
-    const data = this.addReservationForm.value
+    const data = this.addReservationForm.value;
     this.reservationService.addReservation(data).subscribe(() => {
       this.toastr.success('Réservation ajouté !');
-      this.router.navigateByUrl("/reservation")
-    })
+      this.router.navigateByUrl('/reservation');
+    });
   }
 }

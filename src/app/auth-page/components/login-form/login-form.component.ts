@@ -1,7 +1,10 @@
+// import { HttpErrorResponse } from '@angular/common/http';
+// import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { first } from 'rxjs';
 import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
@@ -17,7 +20,8 @@ export class LoginFormComponent implements OnInit {
     private authService: AuthService,
     private toastr: ToastrService,
     private router: Router
-  ) {}
+  ) // private http: HttpResponse<any>
+  {}
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -38,10 +42,19 @@ export class LoginFormComponent implements OnInit {
     const body = this.loginForm.value;
 
     if (body.email && body.password) {
-      this.authService.login(body.email, body.password).subscribe(async () => {
-        await this.router.navigateByUrl('/');
-        this.toastr.success('Connexion réussie !');
-      });
+      this.authService
+        .login(body.email, body.password)
+        .pipe(first())
+        .subscribe({
+          next: (result) => {
+            this.router.navigateByUrl('/');
+            this.toastr.success('Connexion réussie !');
+          },
+          error: (err) => {
+            this.toastr.error('Identifiants incorrect');
+          },
+          complete: () => {},
+        });
     }
 
     this.loginForm.reset();
