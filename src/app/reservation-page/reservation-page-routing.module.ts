@@ -4,8 +4,8 @@ import { ModifiyReservationComponent } from './components/modifiy-reservation/mo
 import { ReservationComponent } from './components/reservation/reservation.component';
 
 const routes: Routes = [
-  { path: '', component: ReservationComponent },
   { path: ':id', component: ModifiyReservationComponent },
+  { path: '', component: ReservationComponent },
 ];
 
 @NgModule({

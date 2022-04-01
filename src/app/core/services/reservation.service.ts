@@ -30,4 +30,12 @@ export class ReservationService {
       ...formData,
     });
   }
+
+  getReservationById(reservationId: string): Observable<Reservation> {
+    return this.http.get<Reservation>(`this._baseUrl/${reservationId}`)
+  }
+
+  deleteReservation(reservationId: string): Observable<Reservation> {
+    return this.http.delete<Reservation>(`this._baseUrl/${reservationId}`)
+  }
 }
